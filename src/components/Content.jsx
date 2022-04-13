@@ -2,6 +2,7 @@ import Button from "./Button";
 import Card from "./Card";
 import Sdata from "./Sdata";
 import Button2 from "./Button2";
+
 function ncard(val) {
   return (
     <Card
@@ -17,20 +18,18 @@ function ncard(val) {
 const Content = () => {
   return (
     <>
-      <div className="main_containe  ">
-        <div className="flex flex-col justify-evenly py-0 bg-fixed ">
+      <div className="main_container " style={{backgroundColor: '#141414'}}>
+        <div className="flex flex-col justify-between">
           <div
             style={{
-              background: `url("https://images3.alphacoders.com/100/thumb-1920-1000030.jpg")`,
-              background: `rgba(0, 0, 0, 05)`,
-              opacity: `0.9`,
-              backgroundSize: `auto`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3) -20%, rgba(0, 0, 0, 1) 100%), url("https://images7.alphacoders.com/115/thumbbig-1155001.webp")`,
+              backgroundSize: `cover`,
             }}
-            className="flex flex-col items-center px-10 py-44 justify-evenly text-white bg-gradient-to-tr from-slate-300 to-slate-900 opacity-10"
+            className="flex flex-col items-center h-screen w-auto  justify-evenly content-center  text-white bg-no-repeat bg-fixed bg-cover pt-20 pb-24 "
           >
-            <div className="text-6xl py-8">Declare Variable, Not War.</div>
-            <div className="text-2xl py-4">Looking for spicy Codes?</div>
-            <div className="text-lg py-4 text-center text-slate-300">
+            <div className="text-6xl ">Declare Variable, Not War!</div>
+            <div className="text-2xl ">Looking for spicy Codes?</div>
+            <div className="text-lg  text-center text-slate-300">
               Hi! I'm Rohan, working as a webdeveloper in D.Y. Patil university
               <br />
               I've Been learnign DSA for 2 years now, This roadmap is pretty
@@ -38,13 +37,16 @@ const Content = () => {
               <br />
               Webdev using framework like React, Tailwindcss and Nodejs.
             </div>
-            <div className="p-6 ">
-              <Button2 button="Our Team" className="sm:hidden" />
+            <div className="btn custom_button ">
+              {/* <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-sm animate-bounce">
+                <a href="#">Watch Now</a>
+              </button> */}
+              <Button2 button="Watch Now" /> 
             </div>
           </div>
         </div>
-        <div className="card_container pt-28">
-          <div className="flex flex-row justify-evenly items-center flex-wrap bg-white pt-12">
+        <div className="card_container pt-28 ">
+          <div className="flex flex-row justify-evenly items-center flex-wrap pt-28 pb-32 " style={{backgroundColor: '#141414'}}>
             {Sdata.map(ncard)}
             {/* <Card
                 link="#"
